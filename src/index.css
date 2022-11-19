@@ -1,0 +1,133 @@
+*::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+:root {
+  --light-clr: #918e9b;
+  --dark-clr: #222;
+  --darker-clr: #000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-weight: 300;
+  color: var(--dark-clr);
+}
+.light {
+  color: var(--light-clr);
+  font-weight: 300;
+}
+.bold {
+  font-weight: 600;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.container {
+  max-width: 900px;
+  width: 95%;
+  margin: 0 auto;
+
+  /* overflow: hidden; */
+}
+
+header {
+  height: 10vh;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo img {
+  width: 100px;
+}
+
+/* HERO */
+.hero {
+  margin-bottom: 4em;
+}
+.hero img {
+  width: 90%;
+}
+.hero-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3em 0;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.hero-text {
+  font-size: 1rem;
+  line-height: 110%;
+  width: 30ch;
+}
+
+/* CARD */
+.card-container {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: scroll;
+  gap: 3em;
+  margin-bottom: 3em;
+}
+.card {
+  position: relative;
+  width: min-content;
+  margin-bottom: 1em;
+}
+
+.card .bg-img {
+  width: 300px;
+  margin-bottom: 0.7em;
+}
+
+.card .activity-status {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-weight: 400;
+  line-height: 110%;
+  color: var(--dark-clr);
+  background-color: #fff;
+  text-transform: uppercase;
+  padding: 0.4em 0.6em;
+  border-radius: 5px;
+  border: none;
+  user-select: none;
+}
+
+.activity-detail i {
+  color: #fe395c;
+  margin-bottom: 0.6em;
+}
+
+.activity-detail i ~ p {
+  margin-bottom: 0.6em;
+}
+
+@media (max-width: 400px) {
+  .card .bg-img {
+    width: 200px;
+  }
+}
